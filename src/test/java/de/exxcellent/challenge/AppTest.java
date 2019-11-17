@@ -3,6 +3,10 @@ package de.exxcellent.challenge;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import de.exxcellent.dataAnalysers.DataAnalyser;
+import de.exxcellent.dataAnalysers.FootballAnalyser;
+import de.exxcellent.dataAnalysers.WeatherAnalyser;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
@@ -11,22 +15,17 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  */
 
 public class AppTest {
-
-    private String successLabel = "not successful";
-
-    @BeforeEach
-    public void setUp() {
-        successLabel = "successful";
-    }
-
-    @Test
-    public void aPointlessTest() {
-        assertEquals("successful", successLabel, "My expectations were not met");
-    }
-
-    @Test
-    public void runFootball() {
-        App.main("--football", "football.csv");
-    }
+	
+	@Test
+	public void weatherTest() {
+		DataAnalyser wa = new WeatherAnalyser();
+		assertEquals("14", wa.findItemWithMinSpread(), "right result");
+	}
+	
+	@Test
+	public void footballTest() {
+		DataAnalyser fa = new FootballAnalyser();
+		assertEquals("Aston_Villa", fa.findItemWithMinSpread(), "right result");
+	}
 
 }

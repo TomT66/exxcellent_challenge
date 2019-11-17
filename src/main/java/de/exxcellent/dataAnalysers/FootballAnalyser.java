@@ -9,7 +9,7 @@ import de.exxcellent.fileReaders.ExxcellentReader;
 public class FootballAnalyser implements DataAnalyser{
 
 	@Override
-	public String findValuewithMinSpread() {
+	public String findItemWithMinSpread() {
 		// TODO Auto-generated method stub
 		ExxcellentReader rdr = new CSVReader();		
 		ArrayList<String[]> FootballData = rdr.readfile("src/main/resources/de/exxcellent/challenge/football.csv");

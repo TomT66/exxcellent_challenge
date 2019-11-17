@@ -9,7 +9,7 @@ import de.exxcellent.fileReaders.ExxcellentReader;
 public class WeatherAnalyser implements DataAnalyser{
 
 	@Override
-	public String findValuewithMinSpread() {
+	public String findItemWithMinSpread() {
 		// TODO Auto-generated method stub
 		ExxcellentReader rdr = new CSVReader();
 		ArrayList<String[]> weatherData = rdr.readfile("src/main/resources/de/exxcellent/challenge/weather.csv");
