@@ -13,7 +13,7 @@ public class CSVReader implements ExxcellentReader{
 		try {
 			BufferedReader rdr = new BufferedReader(new FileReader(path));
 			String tempString;
-			rdr.readLine();
+			//rdr.readLine();
 			while((tempString = rdr.readLine()) != null) {
 				result.add(tempString.split(","));
 			}

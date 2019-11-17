@@ -19,13 +19,13 @@ public class AppTest {
 	@Test
 	public void weatherTest() {
 		DataAnalyser wa = new WeatherAnalyser();
-		assertEquals("14", wa.findItemWithMinSpread(), "right result");
+		assertEquals("14", wa.findItemWithMinSpread("MxT","MnT"), "right result");
 	}
 	
 	@Test
 	public void footballTest() {
 		DataAnalyser fa = new FootballAnalyser();
-		assertEquals("Aston_Villa", fa.findItemWithMinSpread(), "right result");
+		assertEquals("Aston_Villa", fa.findItemWithMinSpread("Goals","Goals Allowed"), "right result");
 	}
 
 }
