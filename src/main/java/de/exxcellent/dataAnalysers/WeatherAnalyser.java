@@ -1,4 +1,4 @@
-package de.exxcellent.dataAnalysers;
+/*package de.exxcellent.dataAnalysers;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -9,8 +9,7 @@ import de.exxcellent.fileReaders.ExxcellentReader;
 
 public class WeatherAnalyser implements DataAnalyser{
 
-	@Override
-	public String findItemWithMinSpread(String v1, String v2) {
+	public String findItemWithMinSpread(String url, String v1, String v2) {
 		// TODO Auto-generated method stub
 		ExxcellentReader rdr = new CSVReader();
 		ArrayList<String[]> weatherData = rdr.readfile("src/main/resources/de/exxcellent/challenge/weather.csv");
@@ -31,4 +30,4 @@ public class WeatherAnalyser implements DataAnalyser{
 		}
 		return dayResult;
 	}
-}
+}*/
