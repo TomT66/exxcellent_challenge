@@ -21,10 +21,4 @@ public class AppTest {
 		assertEquals("14", wa.findItemWithMinSpread("src/main/resources/de/exxcellent/challenge/weather.csv","MxT","MnT"), "right result");
 	}
 	
-	@Test
-	public void footballTest() {
-		DataAnalyser fa = new DataAnalyserImpl();
-		assertEquals("Aston_Villa", fa.findItemWithMinSpread("src/main/resources/de/exxcellent/challenge/football.csv","Goals","Goals Allowed"), "right result");
-	}
-
 }
