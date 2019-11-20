@@ -3,16 +3,12 @@ package de.exxcellent.dataAnalysers;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import de.exxcellent.fileReaders.CSVReader;
-import de.exxcellent.fileReaders.ExxcellentReader;
-
 
 public class DataAnalyserImpl implements DataAnalyser{
 	@Override
-	public String findItemWithMinSpread(String url, String v1, String v2) {
+	public String findItemWithMinSpread(ArrayList<String[]> data, String v1, String v2) {
 		// TODO Auto-generated method stub
-		ExxcellentReader rdr = new CSVReader();		
-		ArrayList<String[]> CSVData = rdr.readfile(url);
+		ArrayList<String[]> CSVData = data;
 		int v1Index = Arrays.asList(CSVData.get(0)).indexOf(v1);
 		int v2Index = Arrays.asList(CSVData.get(0)).indexOf(v2);
 		CSVData.remove(0);
