@@ -13,6 +13,7 @@ public class DataAnalyserImpl implements DataAnalyser{
 		int v2Index = Arrays.asList(CSVData.get(0)).indexOf(v2);
 		CSVData.remove(0);
 		int Distance = Math.abs(Integer.parseInt(CSVData.get(0)[v1Index]) - Integer.parseInt(CSVData.get(0)[v2Index]));
+		CSVData.remove(0);
 		String Result = "";
 		for(String[] teamData : CSVData) {
 			if(Distance > Math.abs(Integer.parseInt(teamData[v1Index]) - Integer.parseInt(teamData[v2Index]))){
