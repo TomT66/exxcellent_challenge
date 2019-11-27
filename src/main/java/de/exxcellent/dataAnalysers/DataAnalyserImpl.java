@@ -15,13 +15,13 @@ public class DataAnalyserImpl implements DataAnalyser{
 		int Distance = Math.abs(Integer.parseInt(CSVData.get(0)[v1Index]) - Integer.parseInt(CSVData.get(0)[v2Index]));
 		CSVData.remove(0);
 		String Result = "";
-		for(String[] teamData : CSVData) {
-			if(Distance > Math.abs(Integer.parseInt(teamData[v1Index]) - Integer.parseInt(teamData[v2Index]))){
-				Result = teamData[0];
-				Distance = Math.abs(Integer.parseInt(teamData[v1Index]) - Integer.parseInt(teamData[v2Index]));
+		for(String[] dataRow : CSVData) {
+			if(Distance > Math.abs(Integer.parseInt(dataRow[v1Index]) - Integer.parseInt(dataRow[v2Index]))){
+				Result = dataRow[0];
+				Distance = Math.abs(Integer.parseInt(dataRow[v1Index]) - Integer.parseInt(dataRow[v2Index]));
 			}
-			else if(Distance == Math.abs(Integer.parseInt(teamData[v1Index]) - Integer.parseInt(teamData[v2Index]))) {
-				Result = ", and " + teamData[0];
+			else if(Distance == Math.abs(Integer.parseInt(dataRow[v1Index]) - Integer.parseInt(dataRow[v2Index]))) {
+				Result = ", and " + dataRow[0];
 			}
 		}
 		return Result;
